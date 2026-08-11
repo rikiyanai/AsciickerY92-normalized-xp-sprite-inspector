@@ -1,0 +1,39 @@
+{
+  "schema_id": "normalized-xp.armored-inspector-gif.v1",
+  "gif_sha256": "d274143ad212fe3c226c8f3790de0d949e8a664e567af460d3534b7281360be5",
+  "width": 1320,
+  "height": 720,
+  "frame_count": 5,
+  "frame_sha256": [
+    "6e28964453c16f07d71d63c8c79002076c30e248e2e4f436e7ee5aeb661100c3",
+    "bef4cbf709ee8deb76a2facf8b77ccc842433f0edf7f66bc8097d766612a9974",
+    "f5460e0f967e045e5404e063dbc29f33306f6b10630dcb540b3ed4828ed8c0c0",
+    "d7961b9a09d2af2ad5322f4ee54b606659df4dbd040fe7ec30fec23c66210abd",
+    "69df8b937b4654ee1108bcc45a88ba3a70b8c89b0eb6b672f194b60674586b26"
+  ],
+  "caption_sha256": [
+    "a938c8b94d20e1913990165198793786b80fd23face0e487abf1824d34f1c860",
+    "b1e9034ce8671694bc5185d8f17ec283767054127323994bc08e17a071f71159",
+    "db31a03a254e97518c49ad5ea9beae84c53ed388ebdd1052a84f5d7a3233d83c",
+    "c97e88d1e6d7ab27cc4491914e726424a08d8389d7a48c38ff271764f13d746e",
+    "c97e88d1e6d7ab27cc4491914e726424a08d8389d7a48c38ff271764f13d746e"
+  ],
+  "semantic_frame_indices": {
+    "composed_uv_body": 0,
+    "armor_l3_grid": 1,
+    "helmet_l4_grid": 3,
+    "helmet_l4_angle_1": 4
+  },
+  "semantic_frame_sha256": {
+    "composed_uv_body": "6e28964453c16f07d71d63c8c79002076c30e248e2e4f436e7ee5aeb661100c3",
+    "armor_l3_grid": "bef4cbf709ee8deb76a2facf8b77ccc842433f0edf7f66bc8097d766612a9974",
+    "helmet_l4_grid": "d7961b9a09d2af2ad5322f4ee54b606659df4dbd040fe7ec30fec23c66210abd",
+    "helmet_l4_angle_1": "69df8b937b4654ee1108bcc45a88ba3a70b8c89b0eb6b672f194b60674586b26"
+  },
+  "semantic_caption_sha256": {
+    "composed_uv_body": "a938c8b94d20e1913990165198793786b80fd23face0e487abf1824d34f1c860",
+    "armor_l3_grid": "b1e9034ce8671694bc5185d8f17ec283767054127323994bc08e17a071f71159",
+    "helmet_l4_grid": "c97e88d1e6d7ab27cc4491914e726424a08d8389d7a48c38ff271764f13d746e",
+    "helmet_l4_angle_1": "c97e88d1e6d7ab27cc4491914e726424a08d8389d7a48c38ff271764f13d746e"
+  }
+}

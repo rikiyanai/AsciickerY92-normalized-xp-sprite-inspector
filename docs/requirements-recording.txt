@@ -1,0 +1,3 @@
+# Used only by scripts/regenerate_armored_inspector_gif.py; the product has no
+# runtime Python dependencies beyond the standard library.
+Pillow==12.1.0
