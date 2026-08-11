@@ -1,9 +1,10 @@
-# Normalized-XP UV/Body Inspector
+# AsciickerY92 Normalized XP Sprite Inspector
 
-A standalone, read-only terminal inspector for the normalized REXPaint XP
-sprite-to-UV/body contract. It packages the real `xp_uv_body_viewer.py` surface,
-one reviewed armored player sprite, its anchor map, and the bounded parser/semantic
-helpers needed to run independently of the parent repository.
+A standalone, read-only terminal inspector for the Asciicker Y9-2 normalized
+REXPaint XP sprite-to-UV/body contract. It packages the real
+`xp_uv_body_viewer.py` surface, one reviewed armored player sprite, its anchor
+map, and the bounded parser/semantic helpers needed to run independently of
+the parent repository.
 
 The previous 7x9 layer/frame browser was a product substitution. It and its GIF
 were removed; they did not expose any UV/body relationship.
@@ -43,8 +44,7 @@ mutation interface, and direct rejection by the save and decision functions.
 The replacement is **Verified** by automated read-only contracts and a
 byte-bound, dependency-free decoded recording artifact. Personal visual
 acceptance remains a separate human gate. Source identities and local hardening
-are recorded in [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md); failures and
-revoked claims remain in [docs/FAILURE_LOG.md](docs/FAILURE_LOG.md).
+are recorded in [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md).
 
 The default fixture is `player-1100.xp`, whose five raw layers include the
 normalized base at L2, reviewed armor overlay at L3, and reviewed helmet overlay

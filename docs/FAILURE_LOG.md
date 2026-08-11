@@ -420,3 +420,22 @@ failure log, and contract only; it must not alter the product viewer.
   project metadata patterns and can fail before the test dependency install.
 - The workflow must bind the cache to `requirements-test.txt`; passing local
   tests cannot substitute for a clean GitHub Actions setup path.
+
+## P0C-03 · 2026-08-12 — generic repository name hid the Asciicker Y9-2 owner
+
+- `normalized-xp-sprite-inspector` named the data format and tool but not the
+  Asciicker Y9-2 product whose normalized player sprite and layer contract it
+  inspects. The user selected `AsciickerY92-normalized-xp-sprite-inspector` as
+  the standalone repository identity.
+- README naming is corrected first; local-directory and private GitHub rename
+  remain one coordinated publication step so remotes and parent records cannot
+  point at different names.
+
+## P0C-03 · 2026-08-12 — rename state and README surface corrected
+
+- The local checkout, GitHub repository, and `origin` now all use
+  `AsciickerY92-normalized-xp-sprite-inspector`. The earlier "remain one
+  coordinated publication step" sentence is stale history, not current state.
+- The README keeps the product GIF and source/provenance pointer, but removes
+  front-page failure-log bookkeeping. The failure log remains the durable audit
+  surface for rejected and revoked claims.
