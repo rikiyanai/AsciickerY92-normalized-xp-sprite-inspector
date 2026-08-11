@@ -14,3 +14,16 @@
   package-relative sample data.
 - The product is runnable and locally verified; user acceptance remains a
   separate gate.
+
+## P0C-03 · 2026-08-12 — acceptance re-audit found a product substitution
+
+- Intended product: a standalone normalized-XP UV/body inspector with a
+  judgeable relationship between sprite content and the UV/body inspection
+  surface, while retaining no mutation authority.
+- Observed result: the executable shows a 7x9 glyph frame and generic
+  layer/animation/frame/angle counters. It contains no UV/body model, labels,
+  mapping, or inspection evidence.
+- The deleted GIF accurately showed the proxy, but therefore did not prove the
+  intended product.
+- Highest supported stage: **Implemented and Executed proxy only**. The intended
+  UV/body inspector is not Implemented, Verified, or Accepted.

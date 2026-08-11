@@ -5,7 +5,10 @@ sprite contract. It ships one hash-pinned `player-nude.xp` demonstration asset
 and exposes layer, animation, frame, and angle navigation without any save or
 mutation command.
 
-![Layer, frame, and angle navigation](docs/normalized-xp-inspector.gif)
+**Status: product-boundary hold.** The current executable is a generic
+layer/frame/angle browser. It does not provide the UV/body inspection semantics
+implied by this repository's name and original candidate description. The prior
+GIF was removed because it demonstrated only the narrowed proxy.
 
 ## Run
 
