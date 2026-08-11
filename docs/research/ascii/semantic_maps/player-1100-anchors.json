@@ -1,0 +1,3344 @@
+{
+  "schema_version": "0.1.0",
+  "family": "player",
+  "reference_xp": "../../../../assets/sprites/player-1100.xp",
+  "semantic_layer": 2,
+  "frame_w": 7,
+  "frame_h": 10,
+  "grid_layout": {
+    "angles": 8,
+    "projections": 2,
+    "anim_counts": [
+      1,
+      8
+    ],
+    "frames_per_row": 18,
+    "rows": 8
+  },
+  "palette_roles": {
+    "subcell_fill": {
+      "colors": [
+        "#ffff55"
+      ],
+      "confidence": "high",
+      "usage": "bg",
+      "description": "Yellow sub-cell fill"
+    },
+    "skin": {
+      "colors": [
+        "#ff5555"
+      ],
+      "confidence": "high",
+      "usage": "bg",
+      "description": "Flesh tone"
+    },
+    "skin_detail": {
+      "colors": [
+        "#aa0000"
+      ],
+      "confidence": "high",
+      "usage": "fg",
+      "description": "Dark red face detail"
+    },
+    "shirt_primary": {
+      "colors": [
+        "#aa00aa"
+      ],
+      "confidence": "high",
+      "usage": "both",
+      "description": "Purple torso"
+    },
+    "pants_bright": {
+      "colors": [
+        "#5555ff"
+      ],
+      "confidence": "high",
+      "usage": "both",
+      "description": "Bright blue pants"
+    },
+    "pants_dark": {
+      "colors": [
+        "#0000aa"
+      ],
+      "confidence": "high",
+      "usage": "fg",
+      "description": "Dark blue pants"
+    },
+    "boots_primary": {
+      "colors": [
+        "#aa5500"
+      ],
+      "confidence": "high",
+      "usage": "fg",
+      "description": "Brown boots"
+    },
+    "armor_light": {
+      "colors": [
+        "#aaaaaa"
+      ],
+      "confidence": "high",
+      "usage": "both",
+      "description": "Light armor/metal"
+    },
+    "armor_dark": {
+      "colors": [
+        "#555555"
+      ],
+      "confidence": "high",
+      "usage": "fg",
+      "description": "Dark armor accent"
+    }
+  },
+  "frames": {
+    "0": {
+      "projection": 0,
+      "angle": 0,
+      "anim_index": 0,
+      "anim_name": "idle",
+      "regions": [
+        {
+          "name": "subcell_fill",
+          "bbox": [
+            2,
+            1,
+            4,
+            2
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "face",
+          "bbox": [
+            3,
+            2,
+            3,
+            3
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 2,
+              "glyph": 34,
+              "fg": "#000000",
+              "bg": "#ff5555",
+              "role": "skin_cell"
+            },
+            {
+              "x": 3,
+              "y": 3,
+              "glyph": 118,
+              "fg": "#aa0000",
+              "bg": "#ff5555",
+              "role": "skin_cell"
+            }
+          ],
+          "slot_affinity": "head",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "shirt",
+          "bbox": [
+            2,
+            4,
+            4,
+            6
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 223,
+              "fg": "#ff5555",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 220,
+              "fg": "#0000aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "arms",
+          "bbox": [
+            1,
+            5,
+            5,
+            5
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 1,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "skin_cell"
+            },
+            {
+              "x": 5,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "skin_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "pants",
+          "bbox": [
+            2,
+            6,
+            4,
+            7
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 6,
+              "glyph": 222,
+              "fg": "#5555ff",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 4,
+              "y": 6,
+              "glyph": 221,
+              "fg": "#0000aa",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 2,
+              "y": 7,
+              "glyph": 222,
+              "fg": "#0000aa",
+              "bg": "#5555ff",
+              "role": "pants_cell"
+            },
+            {
+              "x": 4,
+              "y": 7,
+              "glyph": 222,
+              "fg": "#0000aa",
+              "bg": "#5555ff",
+              "role": "pants_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "boots",
+          "bbox": [
+            2,
+            8,
+            4,
+            8
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 8,
+              "glyph": 223,
+              "fg": "#aa5500",
+              "bg": "#000000",
+              "role": "boots_cell"
+            },
+            {
+              "x": 4,
+              "y": 8,
+              "glyph": 223,
+              "fg": "#aa5500",
+              "bg": "#000000",
+              "role": "boots_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "armor",
+          "bbox": [
+            1,
+            3,
+            5,
+            6
+          ],
+          "confidence": "high",
+          "slot_affinity": "armor",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 3,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 1,
+              "y": 4,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 220,
+              "fg": "#555555",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 220,
+              "fg": "#555555",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 5,
+              "y": 4,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 177,
+              "fg": "#ffffff",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#0000aa",
+              "role": "armor_other"
+            }
+          ],
+          "notes": "Layer 3 armor overlay for angle 0",
+          "source_layer": 3
+        },
+        {
+          "name": "helmet",
+          "bbox": [
+            2,
+            0,
+            4,
+            1
+          ],
+          "confidence": "high",
+          "slot_affinity": "head",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 0,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 1,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "helmet"
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            }
+          ],
+          "notes": "Layer 4 helmet overlay for angle 0",
+          "source_layer": 4
+        }
+      ]
+    },
+    "1": {
+      "projection": 0,
+      "angle": 1,
+      "anim_index": 0,
+      "anim_name": "idle",
+      "regions": [
+        {
+          "name": "subcell_fill",
+          "bbox": [
+            2,
+            1,
+            4,
+            2
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "glyph": 221,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "face",
+          "bbox": [
+            3,
+            2,
+            3,
+            3
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 2,
+              "glyph": 34,
+              "fg": "#000000",
+              "bg": "#ff5555",
+              "role": "skin_cell"
+            },
+            {
+              "x": 3,
+              "y": 3,
+              "glyph": 118,
+              "fg": "#aa0000",
+              "bg": "#ff5555",
+              "role": "skin_cell"
+            }
+          ],
+          "slot_affinity": "head",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "shirt",
+          "bbox": [
+            2,
+            4,
+            4,
+            6
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 223,
+              "fg": "#ff5555",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 221,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 220,
+              "fg": "#0000aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "arms",
+          "bbox": [
+            1,
+            5,
+            1,
+            5
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 1,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "skin_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "pants",
+          "bbox": [
+            2,
+            6,
+            4,
+            7
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 6,
+              "glyph": 222,
+              "fg": "#5555ff",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 4,
+              "y": 6,
+              "glyph": 221,
+              "fg": "#0000aa",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 2,
+              "y": 7,
+              "glyph": 222,
+              "fg": "#0000aa",
+              "bg": "#5555ff",
+              "role": "pants_cell"
+            },
+            {
+              "x": 3,
+              "y": 7,
+              "glyph": 223,
+              "fg": "#0000aa",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 4,
+              "y": 7,
+              "glyph": 222,
+              "fg": "#0000aa",
+              "bg": "#5555ff",
+              "role": "pants_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "boots",
+          "bbox": [
+            2,
+            8,
+            4,
+            8
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 8,
+              "glyph": 223,
+              "fg": "#aa5500",
+              "bg": "#000000",
+              "role": "boots_cell"
+            },
+            {
+              "x": 4,
+              "y": 8,
+              "glyph": 223,
+              "fg": "#aa5500",
+              "bg": "#000000",
+              "role": "boots_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "armor",
+          "bbox": [
+            1,
+            3,
+            4,
+            6
+          ],
+          "confidence": "high",
+          "slot_affinity": "armor",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 3,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "glyph": 220,
+              "fg": "#555555",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 1,
+              "y": 4,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 221,
+              "fg": "#555555",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#555555",
+              "role": "armor_edge"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 177,
+              "fg": "#ffffff",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#ff5555",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#0000aa",
+              "role": "armor_other"
+            }
+          ],
+          "notes": "Layer 3 armor overlay for angle 1",
+          "source_layer": 3
+        },
+        {
+          "name": "helmet",
+          "bbox": [
+            2,
+            0,
+            4,
+            2
+          ],
+          "confidence": "high",
+          "slot_affinity": "head",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 0,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 1,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "helmet"
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            }
+          ],
+          "notes": "Layer 4 helmet overlay for angle 1",
+          "source_layer": 4
+        }
+      ]
+    },
+    "2": {
+      "projection": 0,
+      "angle": 2,
+      "anim_index": 0,
+      "anim_name": "idle",
+      "regions": [
+        {
+          "name": "subcell_fill",
+          "bbox": [
+            2,
+            1,
+            4,
+            2
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "glyph": 221,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "face",
+          "bbox": [
+            3,
+            2,
+            3,
+            3
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 2,
+              "glyph": 96,
+              "fg": "#000000",
+              "bg": "#ff5555",
+              "role": "skin_cell"
+            },
+            {
+              "x": 3,
+              "y": 3,
+              "glyph": 192,
+              "fg": "#aa0000",
+              "bg": "#ff5555",
+              "role": "skin_cell"
+            }
+          ],
+          "slot_affinity": "head",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "shirt",
+          "bbox": [
+            2,
+            4,
+            4,
+            5
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 222,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 220,
+              "fg": "#ff5555",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 221,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#ff5555",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "pants",
+          "bbox": [
+            2,
+            6,
+            4,
+            7
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 6,
+              "glyph": 222,
+              "fg": "#5555ff",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 32,
+              "fg": "#000000",
+              "bg": "#0000aa",
+              "role": "pants_cell"
+            },
+            {
+              "x": 4,
+              "y": 6,
+              "glyph": 221,
+              "fg": "#0000aa",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 3,
+              "y": 7,
+              "glyph": 32,
+              "fg": "#000000",
+              "bg": "#0000aa",
+              "role": "pants_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "boots",
+          "bbox": [
+            3,
+            8,
+            4,
+            8
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 8,
+              "glyph": 223,
+              "fg": "#aa5500",
+              "bg": "#000000",
+              "role": "boots_cell"
+            },
+            {
+              "x": 4,
+              "y": 8,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "boots_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "armor",
+          "bbox": [
+            2,
+            4,
+            4,
+            6
+          ],
+          "confidence": "high",
+          "slot_affinity": "armor",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#ff5555",
+              "bg": "#555555",
+              "role": "armor_edge"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#0000aa",
+              "role": "armor_other"
+            },
+            {
+              "x": 4,
+              "y": 6,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            }
+          ],
+          "notes": "Layer 3 armor overlay for angle 2",
+          "source_layer": 3
+        },
+        {
+          "name": "helmet",
+          "bbox": [
+            2,
+            0,
+            4,
+            2
+          ],
+          "confidence": "high",
+          "slot_affinity": "head",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 0,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 1,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "helmet"
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 2,
+              "glyph": 222,
+              "fg": "#ff5555",
+              "bg": "#aaaaaa",
+              "role": "helmet"
+            }
+          ],
+          "notes": "Layer 4 helmet overlay for angle 2",
+          "source_layer": 4
+        }
+      ]
+    },
+    "3": {
+      "projection": 0,
+      "angle": 3,
+      "anim_index": 0,
+      "anim_name": "idle",
+      "regions": [
+        {
+          "name": "subcell_fill",
+          "bbox": [
+            2,
+            1,
+            4,
+            2
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 2,
+              "glyph": 219,
+              "fg": "#000000",
+              "bg": "#000000",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "glyph": 221,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "face",
+          "bbox": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 3,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#ff5555",
+              "role": "skin_cell"
+            }
+          ],
+          "slot_affinity": "head",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "shirt",
+          "bbox": [
+            2,
+            4,
+            4,
+            6
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 221,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 220,
+              "fg": "#0000aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "arms",
+          "bbox": [
+            1,
+            5,
+            1,
+            5
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 1,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "skin_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "pants",
+          "bbox": [
+            2,
+            6,
+            4,
+            7
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 6,
+              "glyph": 222,
+              "fg": "#5555ff",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 4,
+              "y": 6,
+              "glyph": 221,
+              "fg": "#5555ff",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 2,
+              "y": 7,
+              "glyph": 222,
+              "fg": "#0000aa",
+              "bg": "#5555ff",
+              "role": "pants_cell"
+            },
+            {
+              "x": 3,
+              "y": 7,
+              "glyph": 223,
+              "fg": "#0000aa",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 4,
+              "y": 7,
+              "glyph": 222,
+              "fg": "#0000aa",
+              "bg": "#5555ff",
+              "role": "pants_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "boots",
+          "bbox": [
+            2,
+            8,
+            4,
+            8
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 8,
+              "glyph": 223,
+              "fg": "#aa5500",
+              "bg": "#000000",
+              "role": "boots_cell"
+            },
+            {
+              "x": 4,
+              "y": 8,
+              "glyph": 223,
+              "fg": "#aa5500",
+              "bg": "#000000",
+              "role": "boots_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "armor",
+          "bbox": [
+            1,
+            3,
+            5,
+            6
+          ],
+          "confidence": "high",
+          "slot_affinity": "armor",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 3,
+              "glyph": 220,
+              "fg": "#555555",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 1,
+              "y": 4,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 221,
+              "fg": "#555555",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 221,
+              "fg": "#555555",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 5,
+              "y": 4,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#555555",
+              "role": "armor_edge"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 177,
+              "fg": "#555555",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 5,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#0000aa",
+              "role": "armor_other"
+            }
+          ],
+          "notes": "Layer 3 armor overlay for angle 3",
+          "source_layer": 3
+        },
+        {
+          "name": "helmet",
+          "bbox": [
+            2,
+            0,
+            4,
+            2
+          ],
+          "confidence": "high",
+          "slot_affinity": "head",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 0,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 1,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "helmet"
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 2,
+              "glyph": 222,
+              "fg": "#aaaaaa",
+              "bg": "#555555",
+              "role": "helmet"
+            }
+          ],
+          "notes": "Layer 4 helmet overlay for angle 3",
+          "source_layer": 4
+        }
+      ]
+    },
+    "4": {
+      "projection": 0,
+      "angle": 4,
+      "anim_index": 0,
+      "anim_name": "idle",
+      "regions": [
+        {
+          "name": "subcell_fill",
+          "bbox": [
+            2,
+            1,
+            4,
+            2
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 2,
+              "glyph": 32,
+              "fg": "#0000aa",
+              "bg": "#000000",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "face",
+          "bbox": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 3,
+              "glyph": 220,
+              "fg": "#ff5555",
+              "bg": "#000000",
+              "role": "skin_cell"
+            }
+          ],
+          "slot_affinity": "head",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "shirt",
+          "bbox": [
+            2,
+            4,
+            4,
+            5
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "arms",
+          "bbox": [
+            1,
+            5,
+            5,
+            5
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 1,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "skin_cell"
+            },
+            {
+              "x": 5,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "skin_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "pants",
+          "bbox": [
+            2,
+            6,
+            4,
+            7
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 6,
+              "glyph": 222,
+              "fg": "#5555ff",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 221,
+              "fg": "#0000aa",
+              "bg": "#5555ff",
+              "role": "pants_cell"
+            },
+            {
+              "x": 4,
+              "y": 6,
+              "glyph": 221,
+              "fg": "#0000aa",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 2,
+              "y": 7,
+              "glyph": 222,
+              "fg": "#0000aa",
+              "bg": "#5555ff",
+              "role": "pants_cell"
+            },
+            {
+              "x": 4,
+              "y": 7,
+              "glyph": 222,
+              "fg": "#0000aa",
+              "bg": "#5555ff",
+              "role": "pants_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "boots",
+          "bbox": [
+            2,
+            8,
+            4,
+            8
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 8,
+              "glyph": 223,
+              "fg": "#0000aa",
+              "bg": "#000000",
+              "role": "boots_cell"
+            },
+            {
+              "x": 4,
+              "y": 8,
+              "glyph": 223,
+              "fg": "#0000aa",
+              "bg": "#000000",
+              "role": "boots_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "armor",
+          "bbox": [
+            1,
+            3,
+            5,
+            6
+          ],
+          "confidence": "high",
+          "slot_affinity": "armor",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 3,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 1,
+              "y": 4,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 177,
+              "fg": "#555555",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 177,
+              "fg": "#555555",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 5,
+              "y": 4,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#555555",
+              "role": "armor_edge"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 177,
+              "fg": "#555555",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#555555",
+              "role": "armor_edge"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#0000aa",
+              "role": "armor_other"
+            }
+          ],
+          "notes": "Layer 3 armor overlay for angle 4",
+          "source_layer": 3
+        },
+        {
+          "name": "helmet",
+          "bbox": [
+            2,
+            0,
+            4,
+            2
+          ],
+          "confidence": "high",
+          "slot_affinity": "head",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 0,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 1,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "helmet"
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 2,
+              "glyph": 32,
+              "fg": "#000000",
+              "bg": "#555555",
+              "role": "helmet"
+            }
+          ],
+          "notes": "Layer 4 helmet overlay for angle 4",
+          "source_layer": 4
+        }
+      ]
+    },
+    "5": {
+      "projection": 0,
+      "angle": 5,
+      "anim_index": 0,
+      "anim_name": "idle",
+      "regions": [
+        {
+          "name": "subcell_fill",
+          "bbox": [
+            2,
+            1,
+            4,
+            2
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "glyph": 222,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 2,
+              "glyph": 219,
+              "fg": "#000000",
+              "bg": "#000000",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "face",
+          "bbox": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 3,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#ff5555",
+              "role": "skin_cell"
+            }
+          ],
+          "slot_affinity": "head",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "shirt",
+          "bbox": [
+            2,
+            4,
+            4,
+            6
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 222,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 220,
+              "fg": "#0000aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "arms",
+          "bbox": [
+            5,
+            5,
+            5,
+            5
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 5,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "skin_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "pants",
+          "bbox": [
+            2,
+            6,
+            4,
+            7
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 6,
+              "glyph": 222,
+              "fg": "#5555ff",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 4,
+              "y": 6,
+              "glyph": 221,
+              "fg": "#0000aa",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 2,
+              "y": 7,
+              "glyph": 222,
+              "fg": "#0000aa",
+              "bg": "#5555ff",
+              "role": "pants_cell"
+            },
+            {
+              "x": 3,
+              "y": 7,
+              "glyph": 223,
+              "fg": "#0000aa",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 4,
+              "y": 7,
+              "glyph": 222,
+              "fg": "#0000aa",
+              "bg": "#5555ff",
+              "role": "pants_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "boots",
+          "bbox": [
+            2,
+            8,
+            4,
+            8
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 8,
+              "glyph": 223,
+              "fg": "#aa5500",
+              "bg": "#000000",
+              "role": "boots_cell"
+            },
+            {
+              "x": 4,
+              "y": 8,
+              "glyph": 223,
+              "fg": "#aa5500",
+              "bg": "#000000",
+              "role": "boots_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "armor",
+          "bbox": [
+            1,
+            3,
+            5,
+            6
+          ],
+          "confidence": "high",
+          "slot_affinity": "armor",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 3,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "glyph": 220,
+              "fg": "#555555",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 1,
+              "y": 4,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 222,
+              "fg": "#555555",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 222,
+              "fg": "#555555",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 5,
+              "y": 4,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 1,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 177,
+              "fg": "#555555",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#555555",
+              "role": "armor_edge"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#0000aa",
+              "role": "armor_other"
+            }
+          ],
+          "notes": "Layer 3 armor overlay for angle 5",
+          "source_layer": 3
+        },
+        {
+          "name": "helmet",
+          "bbox": [
+            2,
+            0,
+            4,
+            2
+          ],
+          "confidence": "high",
+          "slot_affinity": "head",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 0,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 1,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "helmet"
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 2,
+              "glyph": 221,
+              "fg": "#aaaaaa",
+              "bg": "#555555",
+              "role": "helmet"
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            }
+          ],
+          "notes": "Layer 4 helmet overlay for angle 5",
+          "source_layer": 4
+        }
+      ]
+    },
+    "6": {
+      "projection": 0,
+      "angle": 6,
+      "anim_index": 0,
+      "anim_name": "idle",
+      "regions": [
+        {
+          "name": "subcell_fill",
+          "bbox": [
+            2,
+            1,
+            4,
+            2
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "glyph": 222,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "face",
+          "bbox": [
+            3,
+            2,
+            3,
+            3
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 2,
+              "glyph": 39,
+              "fg": "#000000",
+              "bg": "#ff5555",
+              "role": "skin_cell"
+            },
+            {
+              "x": 3,
+              "y": 3,
+              "glyph": 217,
+              "fg": "#aa0000",
+              "bg": "#ff5555",
+              "role": "skin_cell"
+            }
+          ],
+          "slot_affinity": "head",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "shirt",
+          "bbox": [
+            2,
+            4,
+            4,
+            5
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 222,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 220,
+              "fg": "#ff5555",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 221,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#ff5555",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "pants",
+          "bbox": [
+            2,
+            6,
+            4,
+            7
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 6,
+              "glyph": 222,
+              "fg": "#5555ff",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 32,
+              "fg": "#000000",
+              "bg": "#0000aa",
+              "role": "pants_cell"
+            },
+            {
+              "x": 4,
+              "y": 6,
+              "glyph": 221,
+              "fg": "#0000aa",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 3,
+              "y": 7,
+              "glyph": 32,
+              "fg": "#000000",
+              "bg": "#0000aa",
+              "role": "pants_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "boots",
+          "bbox": [
+            2,
+            8,
+            3,
+            8
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 8,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "boots_cell"
+            },
+            {
+              "x": 3,
+              "y": 8,
+              "glyph": 223,
+              "fg": "#aa5500",
+              "bg": "#000000",
+              "role": "boots_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "armor",
+          "bbox": [
+            2,
+            4,
+            4,
+            6
+          ],
+          "confidence": "high",
+          "slot_affinity": "armor",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#ff5555",
+              "bg": "#555555",
+              "role": "armor_edge"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 6,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#0000aa",
+              "role": "armor_other"
+            }
+          ],
+          "notes": "Layer 3 armor overlay for angle 6",
+          "source_layer": 3
+        },
+        {
+          "name": "helmet",
+          "bbox": [
+            2,
+            0,
+            4,
+            2
+          ],
+          "confidence": "high",
+          "slot_affinity": "head",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 0,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 1,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "helmet"
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 2,
+              "glyph": 221,
+              "fg": "#ff5555",
+              "bg": "#aaaaaa",
+              "role": "helmet"
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            }
+          ],
+          "notes": "Layer 4 helmet overlay for angle 6",
+          "source_layer": 4
+        }
+      ]
+    },
+    "7": {
+      "projection": 0,
+      "angle": 7,
+      "anim_index": 0,
+      "anim_name": "idle",
+      "regions": [
+        {
+          "name": "subcell_fill",
+          "bbox": [
+            2,
+            1,
+            4,
+            2
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "glyph": 222,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "face",
+          "bbox": [
+            3,
+            2,
+            3,
+            3
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 2,
+              "glyph": 34,
+              "fg": "#000000",
+              "bg": "#ff5555",
+              "role": "skin_cell"
+            },
+            {
+              "x": 3,
+              "y": 3,
+              "glyph": 118,
+              "fg": "#aa0000",
+              "bg": "#ff5555",
+              "role": "skin_cell"
+            }
+          ],
+          "slot_affinity": "head",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "shirt",
+          "bbox": [
+            2,
+            4,
+            4,
+            6
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 222,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 223,
+              "fg": "#ff5555",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 220,
+              "fg": "#aa00aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#aa00aa",
+              "bg": "#ffff55",
+              "role": "shirt_cell"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 220,
+              "fg": "#0000aa",
+              "bg": "#aa00aa",
+              "role": "shirt_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "arms",
+          "bbox": [
+            5,
+            5,
+            5,
+            5
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 5,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#ff5555",
+              "bg": "#ffff55",
+              "role": "skin_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "pants",
+          "bbox": [
+            2,
+            6,
+            4,
+            7
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 6,
+              "glyph": 222,
+              "fg": "#5555ff",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 4,
+              "y": 6,
+              "glyph": 221,
+              "fg": "#0000aa",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 2,
+              "y": 7,
+              "glyph": 222,
+              "fg": "#0000aa",
+              "bg": "#5555ff",
+              "role": "pants_cell"
+            },
+            {
+              "x": 3,
+              "y": 7,
+              "glyph": 223,
+              "fg": "#0000aa",
+              "bg": "#ffff55",
+              "role": "pants_cell"
+            },
+            {
+              "x": 4,
+              "y": 7,
+              "glyph": 222,
+              "fg": "#0000aa",
+              "bg": "#5555ff",
+              "role": "pants_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "boots",
+          "bbox": [
+            2,
+            8,
+            4,
+            8
+          ],
+          "confidence": "high",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 8,
+              "glyph": 223,
+              "fg": "#aa5500",
+              "bg": "#000000",
+              "role": "boots_cell"
+            },
+            {
+              "x": 4,
+              "y": 8,
+              "glyph": 223,
+              "fg": "#aa5500",
+              "bg": "#000000",
+              "role": "boots_cell"
+            }
+          ],
+          "slot_affinity": "body",
+          "notes": "Auto-generated from layer 2 sprite data"
+        },
+        {
+          "name": "armor",
+          "bbox": [
+            2,
+            3,
+            5,
+            6
+          ],
+          "confidence": "high",
+          "slot_affinity": "armor",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 2,
+              "y": 3,
+              "glyph": 220,
+              "fg": "#555555",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 4,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "glyph": 222,
+              "fg": "#555555",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 5,
+              "y": 4,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "glyph": 221,
+              "fg": "#ff5555",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "glyph": 177,
+              "fg": "#ffffff",
+              "bg": "#aaaaaa",
+              "role": "armor_metal"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#555555",
+              "role": "armor_edge"
+            },
+            {
+              "x": 3,
+              "y": 6,
+              "glyph": 223,
+              "fg": "#000000",
+              "bg": "#0000aa",
+              "role": "armor_other"
+            }
+          ],
+          "notes": "Layer 3 armor overlay for angle 7",
+          "source_layer": 3
+        },
+        {
+          "name": "helmet",
+          "bbox": [
+            2,
+            0,
+            4,
+            2
+          ],
+          "confidence": "high",
+          "slot_affinity": "head",
+          "palette_roles": [],
+          "semantic_cells": [
+            {
+              "x": 3,
+              "y": 0,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 2,
+              "y": 1,
+              "glyph": 222,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 3,
+              "y": 1,
+              "glyph": 220,
+              "fg": "#000000",
+              "bg": "#aaaaaa",
+              "role": "helmet"
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "glyph": 221,
+              "fg": "#000000",
+              "bg": "#ffff55",
+              "role": "subcell_fill"
+            }
+          ],
+          "notes": "Layer 4 helmet overlay for angle 7",
+          "source_layer": 4
+        }
+      ]
+    }
+  }
+}

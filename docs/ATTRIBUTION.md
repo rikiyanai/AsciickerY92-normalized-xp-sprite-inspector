@@ -2,16 +2,36 @@
 
 Private source repository: `rikiyanai/asciicker-Y9-2`.
 
-| Standalone path | Source identity | SHA-256 |
-| --- | --- | --- |
-| `scripts/xp_read_model.py` | `pipeline-v3/scripts/xp_read_model.py` at pipeline commit `7fdecabf44175d25d3793335dee4d38e8b089a81` | `f2ed6a03d8ca906cb60581709a60ac2a9666802153da206c34462f405ac19af3` |
-| `assets/player-nude.xp` | `assets/sprites/player-nude.xp` at Y9-2 commit `242ecba44f76ed1120dadf06653fd6de47017b7f` | `5054a77f6d991b58e4e3fb326e71eea1d03135fd30127348ba4ee7be1cd8e39c` |
+The product surface is `pipeline-v3/scripts/xp_uv_body_viewer.py` from the
+`pipeline-v3` worktree at commit `9e585bfd68d24b8e8ab442fb467592ec837ef8b0`.
+Its upstream SHA-256 before standalone hardening is
+`15f1de8f39e9c0a8bc7b098a47d8895d51ae227b17e245e6865b7b57fcbbd279`.
+The latest source-owning commit for that path is
+`d33756a8738966e8b4570a1e6b42972a720b275b`.
 
-`scripts/normalized_xp_inspector.py` is a standalone read-only adapter written
-for this repository. It implements only metadata inspection and terminal
-preview over the parser model above. The mutation-capable parent
-`pipeline-v3/scripts/xp_uv_body_viewer.py` is intentionally excluded.
+The following bounded dependencies come from the Y9-2 tree at
+`a6db2cdc2961e78eea02e79d39b5487d8940c1e9`:
 
-No third-party library is bundled. Python's `cp437` codec is used for terminal
-preview. Public visibility remains subject to the source repository's asset
-ownership decision; this repository stays private.
+| Standalone path | SHA-256 |
+| --- | --- |
+| `scripts/cli_style.py` | `6c088459ca6dc308b4fd927ecef1fcd0976c4824debce4dcdc89a89a60ba939c` |
+| `scripts/pipeline/xp_core.py` | `3fb74fe296a395313247e53e1c4595602ffb3677554ebf5cd2b2e054d969ef1f` |
+| `scripts/pipeline/xp_assets_browser_layer_2_only.py` | `959bde94b509895786df02963a25c20779ca6af7eb3e077b97dc37907bc114f3` |
+| `scripts/pipeline/bundle_wizard/semantic_dict.py` | `8a3e4da69fe30b42e1fd704db0ece66df3bc1b3f40bf96db1cea5336befb0afb` |
+| `scripts/pipeline/sprite_errors.py` | `615e36bfc0b2b0b8049633fe385f0d4018af0bbdd16a6f0422f2936048704004` |
+| `assets/sprites/player-1100.xp` | `9895deede51b6bfe2a0a054b165005d41154962cd1aee37490b04467018de37c` |
+| `docs/research/ascii/semantic_maps/player-1100-anchors.json` | `e10427b489055f3eb3c9a8feaab7fb82d74b6877cf326ae5b844603d472e5027` |
+| `docs/research/ascii/semantic_maps/layer_evidence_cards.jsonl` | `c39875a33f3f0100be7a53ba1a050ce4b48f57cb585de25e9fd4bcafe9fd00d3` |
+
+Standalone hardening changes are deliberately local and reviewable:
+
+- package-relative source and asset discovery;
+- one-shot rendering of the actual anchor-review UV/body screen;
+- engine-order composition of the reviewed L2 base, L3 armor, and L4 helmet
+  layers in `player-1100.xp`, with region grids bound to each region's recorded
+  source layer;
+- fail-closed save, assignment, review-decision, and batch-mutation paths; and
+- a launcher whose default target is the packaged reviewed anchor map.
+
+No third-party Python library is bundled. Public visibility remains subject to
+the parent repository's asset-ownership decision; this repository stays private.

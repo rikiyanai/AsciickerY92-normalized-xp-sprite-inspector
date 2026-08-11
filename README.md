@@ -1,14 +1,12 @@
-# Normalized XP Sprite Inspector
+# Normalized-XP UV/Body Inspector
 
 A standalone, read-only terminal inspector for the normalized REXPaint XP
-sprite contract. It ships one hash-pinned `player-nude.xp` demonstration asset
-and exposes layer, animation, frame, and angle navigation without any save or
-mutation command.
+sprite-to-UV/body contract. It packages the real `xp_uv_body_viewer.py` surface,
+one reviewed armored player sprite, its anchor map, and the bounded parser/semantic
+helpers needed to run independently of the parent repository.
 
-**Status: product-boundary hold.** The current executable is a generic
-layer/frame/angle browser. It does not provide the UV/body inspection semantics
-implied by this repository's name and original candidate description. The prior
-GIF was removed because it demonstrated only the narrowed proxy.
+The previous 7x9 layer/frame browser was a product substitution. It and its GIF
+were removed; they did not expose any UV/body relationship.
 
 ## Run
 
@@ -18,23 +16,38 @@ Python 3.11 or newer is the only dependency.
 ./run-inspector.sh
 ```
 
-Controls: `j`/`k` change layer, `h`/`l` change angle, `n`/`p` change frame,
-`a` changes animation, and `q` exits. For deterministic output or automation:
+The interactive screen relates three views of the selected sprite cell:
+
+- the engine-order composition of base, armor, and helmet layers;
+- the focused semantic body region and its cells across angles; and
+- atlas-global UV coordinates for every cell in the frame.
+
+Navigation includes arrow keys, `a`/`d` for angle, `w`/`s` for animation,
+`,`/`.` for frame, `r`/`f` for region focus, `g` for the angle grid, `b` for a
+packaged body-map band when present, and `q` to quit. Assignment, anchor save,
+review-decision capture, and batch mutation are blocked in this standalone.
+
+For deterministic non-TTY execution of the same UV/body rendering surface:
 
 ```sh
 ./run-inspector.sh --once
-./run-inspector.sh --json
 ```
 
-Both commands read the bundled asset and write nothing. The JSON mode prints
-the exact source hash, XP version, raw layer dimensions, animation lengths,
-frame dimensions, and selected coordinates.
+## Product boundary and status
 
-## Boundary
+This repository provides inspection, not authoring. The packaged anchor JSON,
+sprite, and evidence cards are inputs and must remain byte-identical while the
+program runs. Tests exercise the real screen, rejection of the historical batch
+mutation interface, and direct rejection by the save and decision functions.
 
-This extraction contains a parser-only XP reader and a new read-only viewer.
-It does not contain the parent viewer's decision capture, anchor editing,
-semantic-map writes, compiler, runtime, or unrelated sprite library.
+The replacement is **Implemented and Executed**. Automated read-only contract
+checks can support **Verified** after they pass, but personal visual acceptance
+is deliberately not inferred from those checks. Source identities and local
+hardening are recorded in [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md); failures
+and revoked claims remain in [docs/FAILURE_LOG.md](docs/FAILURE_LOG.md).
 
-Source identities and the deliberate rewrite boundary are recorded in
-[docs/ATTRIBUTION.md](docs/ATTRIBUTION.md).
+The default fixture is `player-1100.xp`, whose five raw layers include the
+normalized base at L2, reviewed armor overlay at L3, and reviewed helmet overlay
+at L4. The first screen composes L2-L4 and focuses the armor region; the region
+grid reads the focused region's recorded source layer rather than pretending all
+regions belong to L2.
