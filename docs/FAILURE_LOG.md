@@ -1,11 +1,16 @@
 # Failure Log
 
-## 2026-08-11 — repository created; unsafe extraction refused
+## P0C-03 · 2026-08-11 — repository created; unsafe extraction refused
 
-- The private repository and boundary exist.
-- The candidate source still combines read-only viewing with mutation-capable
-  anchor and semantic-map modes.
-- No source was copied because doing so would recreate the rejected ownership
-  split rather than produce a standalone read-only tool.
-- Next: isolate the pure XP read model and exact dump/browser surfaces, add a
-  no-write test, then record the real TUI path.
+- The private repository and product boundary were created.
+- The parent `xp_uv_body_viewer.py` combined read-only browsing with mutation
+  surfaces, so it was not copied wholesale.
+
+## P0C-03 · 2026-08-12 — read-only extraction implemented
+
+- Reused the parser-only XP read model and wrote a standalone terminal viewer
+  with no serialization authority.
+- Added exact JSON output, no-write tests, a real terminal recording, and
+  package-relative sample data.
+- The product is runnable and locally verified; user acceptance remains a
+  separate gate.

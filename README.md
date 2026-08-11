@@ -1,23 +1,37 @@
 # Normalized XP Sprite Inspector
 
-Private standalone repository reserved for the read-only normalized-XP sprite
-UV/body inspector (P0C-03).
+A standalone, read-only terminal inspector for the normalized REXPaint XP
+sprite contract. It ships one hash-pinned `player-nude.xp` demonstration asset
+and exposes layer, animation, frame, and angle navigation without any save or
+mutation command.
 
-## Current state
+![Layer, frame, and angle navigation](docs/normalized-xp-inspector.gif)
 
-Repository ownership is established, but source extraction is intentionally
-blocked. The current `xp_uv_body_viewer.py` spans the Y9-2 and pipeline-v3
-checkouts and still embeds anchor/semantic-map mutation modes. Copying that file
-wholesale would violate this repository's read-only product boundary.
+## Run
 
-The extraction must retain only:
+Python 3.11 or newer is the only dependency.
 
-- raw XP layer/frame/angle browsing;
-- exact noninteractive JSON dumps;
-- parser-only XP helpers;
-- selected `player-nude.xp` demo data.
+```sh
+./run-inspector.sh
+```
 
-It must exclude decision capture, anchor editing, batch assignment operations,
-semantic-map saves, compilers, runtime code, and unrelated sprites.
+Controls: `j`/`k` change layer, `h`/`l` change angle, `n`/`p` change frame,
+`a` changes animation, and `q` exits. For deterministic output or automation:
 
-This repository is private. It is not yet runnable or user accepted.
+```sh
+./run-inspector.sh --once
+./run-inspector.sh --json
+```
+
+Both commands read the bundled asset and write nothing. The JSON mode prints
+the exact source hash, XP version, raw layer dimensions, animation lengths,
+frame dimensions, and selected coordinates.
+
+## Boundary
+
+This extraction contains a parser-only XP reader and a new read-only viewer.
+It does not contain the parent viewer's decision capture, anchor editing,
+semantic-map writes, compiler, runtime, or unrelated sprite library.
+
+Source identities and the deliberate rewrite boundary are recorded in
+[docs/ATTRIBUTION.md](docs/ATTRIBUTION.md).
