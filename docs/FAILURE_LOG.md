@@ -27,3 +27,5 @@
   intended product.
 - Highest supported stage: **Implemented and Executed proxy only**. The intended
   UV/body inspector is not Implemented, Verified, or Accepted.
+- The rejected `.tape` recipe was deleted because it could only recreate proof
+  of the proxy; the intended UV/body outcome must be defined before recapture.
