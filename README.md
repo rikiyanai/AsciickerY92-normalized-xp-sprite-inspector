@@ -1,13 +1,10 @@
 # AsciickerY92 Normalized XP Sprite Inspector
 
-A standalone, read-only terminal inspector for the Asciicker Y9-2 normalized
-REXPaint XP sprite-to-UV/body contract. It packages the real
-`xp_uv_body_viewer.py` surface, one reviewed armored player sprite, its anchor
-map, and the bounded parser/semantic helpers needed to run independently of
-the parent repository.
+A standalone, read-only terminal inspector for the Asciicker Y9-2 normalized REXPaint XP sprite-to-UV/body contract.
 
-The previous 7x9 layer/frame browser was a product substitution. It and its GIF
-were removed; they did not expose any UV/body relationship.
+It packages the real `xp_uv_body_viewer.py` surface, one reviewed armored player sprite, its anchor map, and the parser and semantic helpers needed to run independently of the parent repository.
+
+The previous 7x9 layer/frame browser was the wrong product. It did not show the UV/body relationship, so it and its GIF were removed.
 
 ## Run
 
@@ -17,73 +14,36 @@ Python 3.11 or newer is the only dependency.
 ./run-inspector.sh
 ```
 
-The interactive screen relates three views of the selected sprite cell:
+The interactive screen shows three related views of the selected sprite cell:
 
 - the engine-order composition of base, armor, and helmet layers;
-- the focused semantic body region and its cells across angles; and
+- the selected body region and its cells across angles; and
 - atlas-global UV coordinates for every cell in the frame.
 
-Navigation includes arrow keys, `a`/`d` for angle, `w`/`s` for animation,
-`,`/`.` for frame, `r`/`f` for region focus, `g` for the angle grid, `b` for a
-packaged body-map band when present, and `q` to quit. Assignment, anchor save,
-review-decision capture, and batch mutation are blocked in this standalone.
+Use the arrow keys to navigate. Use `a`/`d` for angle, `w`/`s` for animation, `,`/`.` for frame, `r`/`f` for region focus, `g` for the angle grid, `b` for a packaged body-map band, and `q` to quit.
 
-For deterministic non-TTY execution of the same UV/body rendering surface:
+This standalone inspector is read-only. It cannot save assignments, anchors, review decisions, or batch mutations.
+
+For deterministic non-TTY output of the same UV/body view:
 
 ```sh
 ./run-inspector.sh --once
 ```
 
-## Product boundary and status
+## Walkthrough
 
-This repository provides inspection, not authoring. The packaged anchor JSON,
-sprite, and evidence cards are inputs and must remain byte-identical while the
-program runs. Tests exercise the real screen, rejection of the historical batch
-mutation interface, and direct rejection by the save and decision functions.
+![Animated walkthrough of the armored UV/body inspector](docs/armored-inspector.gif)
 
-The replacement is **Verified** by automated read-only contracts and a
-byte-bound, dependency-free decoded recording artifact. Personal visual
-acceptance remains a separate human gate. Source identities and local hardening
-are recorded in [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md).
+The GIF is the README walkthrough. It shows the composed armored sprite and UV panel, the armor grid from source layer L3, the helmet grid from L4, and the helmet grid at another angle.
 
-The default fixture is `player-1100.xp`, whose five raw layers include the
-normalized base at L2, reviewed armor overlay at L3, and reviewed helmet overlay
-at L4. The first screen composes L2-L4 and focuses the armor region; the region
-grid reads the focused region's recorded source layer rather than pretending all
-regions belong to L2.
+## Included fixture
 
-## Real inspector walkthrough
+The default fixture is `player-1100.xp`. Its five raw layers include the normalized base at L2, the reviewed armor overlay at L3, and the reviewed helmet overlay at L4.
 
-![Animated walkthrough of the real armored UV/body inspector](docs/armored-inspector.gif)
+The first screen composes L2-L4 and focuses the armor region. The region grid reads the recorded source layer for that region instead of assuming that every region belongs to L2.
 
-The recording starts directly in the alternate-screen product UI (the startup
-command is deliberately hidden). It shows the composed armored sprite with its
-UV panel, then the armor grid (`source L3`), and then the helmet grid (`source
-L4`) after navigation to another angle. A persistent lower-canvas label names
-the fixture and layer ownership—`player-1100.xp | L2 base + L3 armor + L4
-helmet`—without cropping or modifying the product screen.
+## Scope
 
-Regenerate the committed artifact—never run the tape directly—with:
+This repository is an inspector, not an authoring tool. The packaged sprite, anchor data, and evidence files are inputs and remain unchanged while the inspector runs.
 
-```sh
-python3 -m pip install -r docs/requirements-recording.txt
-./scripts/regenerate_armored_inspector_gif.py
-```
-
-The command requires VHS 0.11.0 and recording-only `Pillow==12.1.0` from
-[`docs/requirements-recording.txt`](docs/requirements-recording.txt). The tape
-creates only `/tmp/p0c03-armored-inspector.raw.gif`; the script captions a
-temporary candidate with Pillow's built-in font, dependency-freely verifies the
-candidate's dimensions, every frame, every caption band, and all four required
-product states against the accepted artifact, then publishes the GIF and its
-exact hash receipt only after those semantic/perceptual checks pass.
-
-The committed artifact remains byte-bound by
-[`docs/armored-inspector.contract.json`](docs/armored-inspector.contract.json): it
-LZW-decodes and composites the GIF without image libraries, then checks its
-1320×720 canvas, every recorded product frame and caption band, plus four
-semantic state fingerprints. VHS timing and rasterization are not byte-stable;
-the regenerator therefore applies a bounded visual-similarity gate before it
-writes the new exact receipt. Manually inspect the composed UV/body view, L3
-armor grid, L4 helmet grid, and changed-angle L4 grid after any intentional
-regeneration.
+Source identities and local hardening notes are in [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md).
