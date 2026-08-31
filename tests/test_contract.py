@@ -408,16 +408,23 @@ class InspectorContract(unittest.TestCase):
             "Enter",
             "Wait+Screen /Anchor review: player-1100-anchors.json/",
             "Show",
-            "Sleep 2s",
+            "Sleep 1s",
             'Type "g"',
-            "Sleep 2s",
+            "Sleep 1s",
             'Type "g"',
+            "Sleep 1s",
+            'Type "s"',
+            "Sleep 1s",
+            'Type "."',
+            "Sleep 1s",
+            'Type "."',
+            "Sleep 1s",
             'Type "r"',
-            "Sleep 2s",
+            "Sleep 1s",
             'Type "g"',
-            "Sleep 2s",
+            "Sleep 1s",
             'Type "d"',
-            "Sleep 2s",
+            "Sleep 1s",
             "Hide",
             'Type "q"',
         ))
@@ -437,7 +444,7 @@ class InspectorContract(unittest.TestCase):
             source,
         )
         self.assertIn("ImageFont.load_default(size=20)", source)
-        self.assertIn("_caption_raw_gif(RAW_GIF, candidate)", source)
+        self.assertIn("_caption_raw_gif(RAW_GIF, candidate, keep=keep)", source)
         self.assertIn("_filter_transient_frames(candidate)", source)
         self.assertIn("candidate_contract = _verify_candidate(candidate)", source)
         self.assertIn("_publish_pair(candidate, candidate_contract_path)", source)
@@ -534,10 +541,52 @@ class InspectorContract(unittest.TestCase):
         self.assertIn("Region grid: helmet  source L4", helmet_grid)
         self.assertIn("*ang 1", helmet_grid)
 
+    def test_animation_controls_reach_adjacent_frames(self) -> None:
+        viewer = load_viewer()
+        state = viewer._load_anchor_state(ANCHOR)
+        asset = viewer._load_raw_asset(viewer._resolve_sprite_entry(str(SPRITE), SPRITE.parent))
+        state.anim_lengths = list(asset.entry.meta.anim_lengths)
+        cell_data = viewer._load_composed_frame_cell_data_from_xp(
+            state, asset, int(state.anchor_data["semantic_layer"])
+        )
+        self.assertEqual(state.current_anim, 0)
+        self.assertTrue(viewer._handle_anchor_key(state, "s", cell_data))
+        self.assertEqual(state.current_anim, 1)
+        self.assertEqual(state.current_frame, 0)
+        self.assertTrue(viewer._handle_anchor_key(state, ".", cell_data))
+        self.assertEqual(state.current_frame, 1)
+        self.assertTrue(viewer._handle_anchor_key(state, ".", cell_data))
+        self.assertEqual(state.current_frame, 2)
+
+    def test_historical_evidence_index_binds_packaged_inputs(self) -> None:
+        index = json.loads((ROOT / "docs/historical-evidence/manifest.json").read_text())
+        paths = sorted((ROOT / "assets/sprites").glob("*.xp"))
+        self.assertEqual(index["xp_assets"]["expected_count"], len(paths))
+        self.assertEqual(index["xp_assets"]["paths"][0]["path"], "assets/sprites/player-1100.xp")
+        self.assertEqual(
+            digest(ROOT / index["xp_assets"]["paths"][0]["path"]),
+            index["xp_assets"]["paths"][0]["sha256"],
+        )
+        for entry in index["source_owned_evidence"]:
+            self.assertEqual(digest(ROOT / entry["path"]), entry["sha256"])
+
     def test_armored_walkthrough_gif_composites_to_golden_product_states(self) -> None:
         self.assertTrue(GIF.is_file())
         contract = json.loads(GIF_CONTRACT.read_text(encoding="utf-8"))
         self.assertEqual(contract["schema_id"], "normalized-xp.armored-inspector-gif.v1")
+        self.assertEqual(contract["frame_count"], 7)
+        self.assertEqual(
+            tuple(contract["semantic_frame_indices"]),
+            (
+                "composed_uv_body",
+                "armor_l3_grid",
+                "animation_frame_1",
+                "animation_frame_2",
+                "animation_frame_3",
+                "helmet_l4_grid",
+                "helmet_l4_angle_1",
+            ),
+        )
         self.assertEqual(digest(GIF), contract["gif_sha256"])
         self.assertGreaterEqual(GIF.stat().st_size, 350_000)
         self.assertLessEqual(GIF.stat().st_size, 900_000)

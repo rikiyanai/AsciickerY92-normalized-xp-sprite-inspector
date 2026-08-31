@@ -439,3 +439,53 @@ failure log, and contract only; it must not alter the product viewer.
 - The README keeps the product GIF and source/provenance pointer, but removes
   front-page failure-log bookkeeping. The failure log remains the durable audit
   surface for rejected and revoked claims.
+
+## P0C-03 · 2026-08-31 — animation-proof and evidence-index successor started
+
+- Requirement: the public proof must show the real normalized XP/body viewer
+  moving through adjacent animation frames while retaining explicit region and
+  angle navigation; the repository must also expose its packaged XP, anchor,
+  and review evidence without copying frozen inputs.
+- Current owners are `scripts/xp_uv_body_viewer.py`,
+  `docs/armored-inspector.tape`,
+  `scripts/regenerate_armored_inspector_gif.py`, and the existing contract
+  JSON. The stale owners are the README's five-state wording and the absence of
+  a dedicated historical-evidence index.
+- The successor is limited to documentation, recording recipe, recording
+  assembly/contract, tests, and provenance indexes. It does not change the
+  viewer's read-only authority or packaged XP bytes.
+- This attempt is **Implemented** only until the new recipe, decoded GIF, full
+  test suite, link checks, and bounded visual inspection pass.
+
+## P0C-03 · 2026-08-31 — first animation-state filter rejected adaptive-palette grouping
+
+- The first successor implementation grouped captioned GIF frames by encoded
+  frame hashes. Pillow's per-frame adaptive palettes changed those bytes even
+  when the decoded terminal canvas was the same, so the expected nine stable
+  capture runs were reported as zero.
+- The command exited before publication and preserved the prior accepted GIF.
+  The falsifier was a decoded coarse-RGB run probe over the raw VHS artifact,
+  which recovered the expected nine stable state runs.
+- The successor moved stable-state selection before captioning and now groups
+  decoded raw canvases by their visible coarse-RGB fingerprint.
+
+## P0C-03 · 2026-08-31 — seven-state animation walkthrough verified
+
+- The canonical VHS route now reaches the real animation group with `s`, steps
+  through three adjacent frames with `.`, then records the armor grid, helmet
+  grid, and changed-angle state. The launcher remains hidden until the viewer
+  title is rendered, and `Hide` remains before quit.
+- The regenerator selected seven stable raw canvases, captioned them, rejected
+  missing or duplicate semantic states, and atomically published the GIF and
+  contract. The accepted artifact is 1320×720, 7 frames, 652461 bytes, and
+  SHA-256 `df3207e0b4f9edf920b44db3581e8607313061ddc31913305e45d2a74ca2a397`.
+- Contract semantic states are composed UV/body, L3 armor grid, animation
+  frames 1–3, L4 helmet grid, and L4 changed-angle grid. The contact sheet and
+  representative frame previews show the ownership caption on every frame and
+  no shell surface.
+- `python3 -m unittest discover -s tests -v` passes 16 of 16 tests. The highest
+  supported stage is **Verified** for the automated recording contract and
+  bounded visual proof; personal acceptance remains separate.
+- Prepared About description: “Read-only Asciicker Y9-2 normalized REXPaint XP
+  sprite inspector for reviewed body regions, layer ownership, UV coordinates,
+  and animation frames.”

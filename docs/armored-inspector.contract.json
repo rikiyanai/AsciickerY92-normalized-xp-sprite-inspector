@@ -1,39 +1,52 @@
 {
   "schema_id": "normalized-xp.armored-inspector-gif.v1",
-  "gif_sha256": "d274143ad212fe3c226c8f3790de0d949e8a664e567af460d3534b7281360be5",
+  "gif_sha256": "df3207e0b4f9edf920b44db3581e8607313061ddc31913305e45d2a74ca2a397",
   "width": 1320,
   "height": 720,
-  "frame_count": 5,
+  "frame_count": 7,
   "frame_sha256": [
-    "6e28964453c16f07d71d63c8c79002076c30e248e2e4f436e7ee5aeb661100c3",
-    "bef4cbf709ee8deb76a2facf8b77ccc842433f0edf7f66bc8097d766612a9974",
-    "f5460e0f967e045e5404e063dbc29f33306f6b10630dcb540b3ed4828ed8c0c0",
-    "d7961b9a09d2af2ad5322f4ee54b606659df4dbd040fe7ec30fec23c66210abd",
-    "69df8b937b4654ee1108bcc45a88ba3a70b8c89b0eb6b672f194b60674586b26"
+    "50687156ac7db0a92f2330574b4bf50aa19be00ea5a6f8e6737cf240c758041a",
+    "5b542432f7b597fbd201b87d1a04fb706f2a65ee0f8f00c6ce7be44f1ab1b941",
+    "e41e49e8df87931776150c2f8c01d4aefa1bb2f48f94552179f66811dea76c0c",
+    "cdf3f1e4b3bb008c6d087cd39ac2330c4e7c6158448d4b95c3a00df18bc38840",
+    "e90ced166528c2018d7fc10d05adbec8964dc58e8145927965d22b9c6ad6a335",
+    "2fc4a5d7d6e37afbd0d685cb1dc658873669c73f20ffbde931787a1200a1f2bc",
+    "90999e54ce831dd39339a4e68a3248cade2ac4cea0e5f0b956e82c54ad0352cf"
   ],
   "caption_sha256": [
-    "a938c8b94d20e1913990165198793786b80fd23face0e487abf1824d34f1c860",
-    "b1e9034ce8671694bc5185d8f17ec283767054127323994bc08e17a071f71159",
-    "db31a03a254e97518c49ad5ea9beae84c53ed388ebdd1052a84f5d7a3233d83c",
-    "c97e88d1e6d7ab27cc4491914e726424a08d8389d7a48c38ff271764f13d746e",
-    "c97e88d1e6d7ab27cc4491914e726424a08d8389d7a48c38ff271764f13d746e"
+    "a0febe63cbc18932964310e15bda6d8c0e48980a18c82a3d050df3dcbca6cd61",
+    "c47625df3417125bfa9d97ce7dd520242363ced9b55147177a3351289a5fc208",
+    "2f0d30bc21364a7ae14c41da5bbefd4df17800263abda06b2d40993cb8b0e8b1",
+    "25f529b51e8ada8f8a82daf68ab18a5a6d1f4afaae05d14ddbba45eb1927ecf6",
+    "a4213f8d7f67ea4db6a91908a0efff69e9da798419dcacb68145f34d07f7329c",
+    "9988bc0166d9fccb3047cb773021ff5e05e6db8ee11879c64109d8e438c6c4c5",
+    "9988bc0166d9fccb3047cb773021ff5e05e6db8ee11879c64109d8e438c6c4c5"
   ],
   "semantic_frame_indices": {
     "composed_uv_body": 0,
     "armor_l3_grid": 1,
-    "helmet_l4_grid": 3,
-    "helmet_l4_angle_1": 4
+    "animation_frame_1": 2,
+    "animation_frame_2": 3,
+    "animation_frame_3": 4,
+    "helmet_l4_grid": 5,
+    "helmet_l4_angle_1": 6
   },
   "semantic_frame_sha256": {
-    "composed_uv_body": "6e28964453c16f07d71d63c8c79002076c30e248e2e4f436e7ee5aeb661100c3",
-    "armor_l3_grid": "bef4cbf709ee8deb76a2facf8b77ccc842433f0edf7f66bc8097d766612a9974",
-    "helmet_l4_grid": "d7961b9a09d2af2ad5322f4ee54b606659df4dbd040fe7ec30fec23c66210abd",
-    "helmet_l4_angle_1": "69df8b937b4654ee1108bcc45a88ba3a70b8c89b0eb6b672f194b60674586b26"
+    "composed_uv_body": "50687156ac7db0a92f2330574b4bf50aa19be00ea5a6f8e6737cf240c758041a",
+    "armor_l3_grid": "5b542432f7b597fbd201b87d1a04fb706f2a65ee0f8f00c6ce7be44f1ab1b941",
+    "animation_frame_1": "e41e49e8df87931776150c2f8c01d4aefa1bb2f48f94552179f66811dea76c0c",
+    "animation_frame_2": "cdf3f1e4b3bb008c6d087cd39ac2330c4e7c6158448d4b95c3a00df18bc38840",
+    "animation_frame_3": "e90ced166528c2018d7fc10d05adbec8964dc58e8145927965d22b9c6ad6a335",
+    "helmet_l4_grid": "2fc4a5d7d6e37afbd0d685cb1dc658873669c73f20ffbde931787a1200a1f2bc",
+    "helmet_l4_angle_1": "90999e54ce831dd39339a4e68a3248cade2ac4cea0e5f0b956e82c54ad0352cf"
   },
   "semantic_caption_sha256": {
-    "composed_uv_body": "a938c8b94d20e1913990165198793786b80fd23face0e487abf1824d34f1c860",
-    "armor_l3_grid": "b1e9034ce8671694bc5185d8f17ec283767054127323994bc08e17a071f71159",
-    "helmet_l4_grid": "c97e88d1e6d7ab27cc4491914e726424a08d8389d7a48c38ff271764f13d746e",
-    "helmet_l4_angle_1": "c97e88d1e6d7ab27cc4491914e726424a08d8389d7a48c38ff271764f13d746e"
+    "composed_uv_body": "a0febe63cbc18932964310e15bda6d8c0e48980a18c82a3d050df3dcbca6cd61",
+    "armor_l3_grid": "c47625df3417125bfa9d97ce7dd520242363ced9b55147177a3351289a5fc208",
+    "animation_frame_1": "2f0d30bc21364a7ae14c41da5bbefd4df17800263abda06b2d40993cb8b0e8b1",
+    "animation_frame_2": "25f529b51e8ada8f8a82daf68ab18a5a6d1f4afaae05d14ddbba45eb1927ecf6",
+    "animation_frame_3": "a4213f8d7f67ea4db6a91908a0efff69e9da798419dcacb68145f34d07f7329c",
+    "helmet_l4_grid": "9988bc0166d9fccb3047cb773021ff5e05e6db8ee11879c64109d8e438c6c4c5",
+    "helmet_l4_angle_1": "9988bc0166d9fccb3047cb773021ff5e05e6db8ee11879c64109d8e438c6c4c5"
   }
 }

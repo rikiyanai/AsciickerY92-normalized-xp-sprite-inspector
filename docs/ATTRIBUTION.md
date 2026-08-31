@@ -33,5 +33,15 @@ Standalone hardening changes are deliberately local and reviewable:
 - fail-closed save, assignment, review-decision, and batch-mutation paths; and
 - a launcher whose default target is the packaged reviewed anchor map.
 
+The complete packaged-input and hand-label inventory is maintained as an
+index in [`docs/historical-evidence/`](historical-evidence/). It points to the
+existing XP, anchor, and evidence-card owners and intentionally duplicates no
+frozen corpus.
+
+The walkthrough recipe uses the real anchor-review frame controls to expose
+three adjacent frames, the L3 armor grid, the L4 helmet grid, and an angle
+change. Its generated GIF is captioned and contract-checked after VHS capture;
+the caption is presentation evidence and does not alter the product surface.
+
 No third-party Python library is bundled. Public visibility remains subject to
 the parent repository's asset-ownership decision; this repository stays private.

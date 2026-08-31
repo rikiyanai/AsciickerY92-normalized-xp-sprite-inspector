@@ -18,20 +18,29 @@ Wait+Screen /Anchor review: player-1100-anchors.json/
 Show
 
 # Default focus is the reviewed armor overlay: source L3 in the next state.
-Sleep 2s
+Sleep 1s
 Type "g"
-Sleep 2s
+Sleep 1s
 
-# Return to the full UV/body view, then advance from armor to helmet.
+# Return to the full UV/body view, enter the reviewed eight-frame animation,
+# then play three adjacent frames with the viewer's real frame-navigation
+# control before moving from armor to helmet.
 Type "g"
+Sleep 1s
+Type "s"
+Sleep 1s
+Type "."
+Sleep 1s
+Type "."
+Sleep 1s
 Type "r"
-Sleep 2s
+Sleep 1s
 
 # The helmet's all-angle grid reveals its distinct L4 source ownership.
 Type "g"
-Sleep 2s
+Sleep 1s
 Type "d"
-Sleep 2s
+Sleep 1s
 # Quit cleanly without recording the restored shell prompt or launch command.
 Hide
 Type "q"

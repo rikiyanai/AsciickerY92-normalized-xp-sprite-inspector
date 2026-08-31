@@ -1,0 +1,28 @@
+{
+  "schema": "asciicker-y92.historical-evidence-index.v1",
+  "scope": "normalized-xp-sprite-inspector",
+  "ownership": "index-only; canonical inputs remain at their existing paths",
+  "xp_assets": {
+    "glob": "assets/sprites/*.xp",
+    "expected_count": 1,
+    "paths": [
+      {
+        "path": "assets/sprites/player-1100.xp",
+        "sha256": "9895deede51b6bfe2a0a054b165005d41154962cd1aee37490b04467018de37c"
+      }
+    ]
+  },
+  "source_owned_evidence": [
+    {
+      "path": "docs/research/ascii/semantic_maps/player-1100-anchors.json",
+      "role": "reviewed frame-local body regions and source-layer ownership",
+      "sha256": "e10427b489055f3eb3c9a8feaab7fb82d74b6877cf326ae5b844603d472e5027"
+    },
+    {
+      "path": "docs/research/ascii/semantic_maps/layer_evidence_cards.jsonl",
+      "role": "historical review cards and hand-label fields",
+      "sha256": "c39875a33f3f0100be7a53ba1a050ce4b48f57cb585de25e9fd4bcafe9fd00d3"
+    }
+  ],
+  "authority_boundary": "Evidence and anchor review are read-only historical inputs; they are not compiler/runtime authority."
+}
