@@ -25,15 +25,16 @@ GIF_CONTRACT = ROOT / "docs" / "armored-inspector.contract.json"
 RECORDING_PILLOW_VERSION = "12.1.0"
 VHS_VERSION = "vhs version 0.11.0"
 CAPTION = "player-1100.xp | L2 base + L3 armor + L4 helmet | read-only UV/body inspector"
-GIF_FRAME_DURATION_MS = 550
-EXPECTED_STATE_COUNT = 7
+GIF_FRAME_DURATION_MS = 180
+EXPECTED_STATE_COUNT = 8
 EXPECTED_STABLE_RUN_COUNT = 9
 BOOTSTRAP_SEMANTIC_NAMES = (
     "composed_uv_body",
     "armor_l3_grid",
+    "animation_group_selected",
     "animation_frame_1",
     "animation_frame_2",
-    "animation_frame_3",
+    "projection_changed",
     "helmet_l4_grid",
     "helmet_l4_angle_1",
 )
@@ -127,8 +128,9 @@ def _stable_raw_frame_indices(raw_gif: Path) -> tuple[int, ...]:
             f"expected {EXPECTED_STABLE_RUN_COUNT}, found {len(stable_runs)}"
         )
     # The third stable run is the deliberate return to the composed view before
-    # entering the animation group. It is a setup redraw, not another proof state.
-    keep_runs = (0, 1, 3, 4, 5, 7, 8)
+    # entering the animation group. It repeats the opening surface, so the proof
+    # keeps the later projection-change state instead.
+    keep_runs = (0, 1, 3, 4, 5, 6, 7, 8)
     return tuple(stable_runs[index][0] for index in keep_runs)
 
 

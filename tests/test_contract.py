@@ -562,27 +562,53 @@ class InspectorContract(unittest.TestCase):
         index = json.loads((ROOT / "docs/historical-evidence/manifest.json").read_text())
         paths = sorted((ROOT / "assets/sprites").glob("*.xp"))
         self.assertEqual(index["xp_assets"]["expected_count"], len(paths))
-        self.assertEqual(index["xp_assets"]["paths"][0]["path"], "assets/sprites/player-1100.xp")
+        self.assertEqual(index["xp_assets"]["expected_count"], 115)
+        indexed_paths = {entry["path"]: entry["sha256"] for entry in index["xp_assets"]["paths"]}
+        self.assertIn("assets/sprites/player-1100.xp", indexed_paths)
+        self.assertEqual(digest(ROOT / "assets/sprites/player-1100.xp"), indexed_paths["assets/sprites/player-1100.xp"])
         self.assertEqual(
-            digest(ROOT / index["xp_assets"]["paths"][0]["path"]),
-            index["xp_assets"]["paths"][0]["sha256"],
+            {str(path.relative_to(ROOT)) for path in paths},
+            set(indexed_paths),
         )
         for entry in index["source_owned_evidence"]:
             self.assertEqual(digest(ROOT / entry["path"]), entry["sha256"])
+
+    def test_every_packaged_xp_has_a_viewable_raw_layer_dump(self) -> None:
+        for path in sorted((ROOT / "assets/sprites").glob("*.xp")):
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(VIEWER),
+                    "--sprite-dir",
+                    str(ROOT / "assets/sprites"),
+                    "--sprite",
+                    path.name,
+                    "--layer",
+                    "0",
+                    "--json",
+                ],
+                check=True,
+                text=True,
+                capture_output=True,
+            )
+            payload = json.loads(result.stdout)
+            self.assertEqual(payload["source_asset"], path.name)
+            self.assertEqual(payload["layer_index"], 0)
 
     def test_armored_walkthrough_gif_composites_to_golden_product_states(self) -> None:
         self.assertTrue(GIF.is_file())
         contract = json.loads(GIF_CONTRACT.read_text(encoding="utf-8"))
         self.assertEqual(contract["schema_id"], "normalized-xp.armored-inspector-gif.v1")
-        self.assertEqual(contract["frame_count"], 7)
+        self.assertEqual(contract["frame_count"], 8)
         self.assertEqual(
             tuple(contract["semantic_frame_indices"]),
             (
                 "composed_uv_body",
                 "armor_l3_grid",
+                "animation_group_selected",
                 "animation_frame_1",
                 "animation_frame_2",
-                "animation_frame_3",
+                "projection_changed",
                 "helmet_l4_grid",
                 "helmet_l4_angle_1",
             ),

@@ -2,8 +2,8 @@
 
 A standalone, read-only terminal inspector for the Asciicker Y9-2 normalized REXPaint XP sprite-to-UV/body contract.
 
-It packages the real `xp_uv_body_viewer.py` surface, one reviewed armored player
-sprite, its anchor map, and the parser and semantic helpers needed to run
+It packages the real `xp_uv_body_viewer.py` surface, the full 115-file XP
+corpus, the reviewed armored player anchor map, and the parser and semantic helpers needed to run
 independently of the parent repository.
 
 ## How an XP sprite becomes a body view
@@ -24,7 +24,7 @@ atlas-global coordinates for the same cells. The composed panel shows the
 ordinal L2-L4 result beside the focused region, so a region label is not being
 inferred from a filename or promoted to runtime authority.
 
-The packaged XP, anchor map, and evidence cards are historical inputs. Their
+The packaged XP corpus, anchor map, and evidence cards are historical inputs. Their
 hand-entered labels and review notes remain evidence, not compiler/runtime
 truth. The complete non-duplicating inventory is in
 [docs/historical-evidence/](docs/historical-evidence/).
@@ -61,12 +61,20 @@ For deterministic non-TTY output of the same UV/body view:
 ![Animated walkthrough of the armored UV/body inspector](docs/armored-inspector.gif)
 
 The GIF shows the composed armored sprite and UV panel, the armor grid from
-source layer L3, three adjacent animation frames, the helmet grid from L4, and
-the helmet grid at another angle.
+source layer L3, adjacent animation-frame progression, the helmet grid from L4,
+and the helmet grid at another angle. It is intentionally paced at 0.18 seconds
+per frame for fast review.
 
-## Included fixture
+## Included corpus and fixture
 
-The default fixture is `player-1100.xp`. Its five raw layers include the normalized base at L2, the reviewed armor overlay at L3, and the reviewed helmet overlay at L4.
+The repository tracks all 115 packaged `.xp` files under `assets/sprites/`.
+Any packaged sprite/layer can be inspected with the exact dump path:
+
+```sh
+python3 scripts/xp_uv_body_viewer.py --sprite-dir assets/sprites --sprite attack-0001.xp --layer 0 --json
+```
+
+The default UV/body fixture is `player-1100.xp`. Its five raw layers include the normalized base at L2, the reviewed armor overlay at L3, and the reviewed helmet overlay at L4.
 
 The first screen composes L2-L4 and focuses the armor region. The region grid reads the recorded source layer for that region instead of assuming that every region belongs to L2.
 
@@ -101,12 +109,12 @@ exact hash receipt only after those semantic/perceptual checks pass.
 The committed artifact remains byte-bound by
 [`docs/armored-inspector.contract.json`](docs/armored-inspector.contract.json): it
 LZW-decodes and composites the GIF without image libraries, then checks its
-1320×720 canvas, every recorded product frame and caption band, plus seven
+1320×720 canvas, every recorded product frame and caption band, plus eight
 semantic state fingerprints. VHS timing and rasterization are not byte-stable;
 the regenerator therefore applies a bounded visual-similarity gate before it
 writes the new exact receipt. Manually inspect the composed UV/body view, L3
-armor grid, L4 helmet grid, and changed-angle L4 grid after any intentional
-regeneration.
+armor grid, adjacent animation frames, L4 helmet grid, and changed-angle L4
+grid after any intentional regeneration.
 
 Source identities and local hardening notes are in
 [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md).

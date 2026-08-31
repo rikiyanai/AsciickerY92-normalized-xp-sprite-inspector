@@ -9,7 +9,7 @@ copy or rewrite the XP bytes, anchor map, or evidence corpus.
 
 | Evidence | Canonical owner | Inventory |
 | --- | --- | --- |
-| XP input | [`assets/sprites/`](../../assets/sprites/) | 1 file: `player-1100.xp` |
+| XP inputs | [`assets/sprites/`](../../assets/sprites/) | 115 packaged `.xp` files |
 | Body-region/source-layer map | [`player-1100-anchors.json`](../../docs/research/ascii/semantic_maps/player-1100-anchors.json) | 8 directional frames; reviewed `armor`→L3 and `helmet`→L4 regions |
 | Review cards | [`layer_evidence_cards.jsonl`](../../docs/research/ascii/semantic_maps/layer_evidence_cards.jsonl) | source-owned card rows; query `source_key` and `hand` fields |
 
@@ -18,10 +18,11 @@ The anchor map gives the frame-local body-region rectangles. The evidence-card
 historical handwritten/reviewer terminology where present. Those labels are
 provenance evidence and are not engine-role authority.
 
-The normalized viewer exposes the complete packaged XP input through its
-default fixture and the complete anchor/evidence relationship through region,
-angle, frame, grid, and UV navigation. Run `./run-inspector.sh` to inspect it;
-run `./run-inspector.sh --once` for a deterministic text surface.
+The normalized viewer exposes the complete packaged XP corpus through raw
+sprite/layer dump mode. The default fixture exposes the complete
+anchor/evidence relationship through region, angle, frame, grid, and UV
+navigation. Run `./run-inspector.sh` to inspect it; run
+`./run-inspector.sh --once` for a deterministic text surface.
 
 The companion machine-readable inventory records the expected count, hashes,
 and canonical evidence paths without duplicating the corpus.

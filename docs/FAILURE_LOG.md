@@ -489,3 +489,42 @@ failure log, and contract only; it must not alter the product viewer.
 - Prepared About description: “Read-only Asciicker Y9-2 normalized REXPaint XP
   sprite inspector for reviewed body regions, layer ownership, UV coordinates,
   and animation frames.”
+
+## P0C-03 · 2026-08-31 — seven-state GIF and one-fixture corpus claim rejected by operator
+
+- Operator correction: the previous status overstated the README/GIF update.
+  The requirement was not merely to link a GIF. The GIF script must regenerate
+  a faster, broader walkthrough that shows real frame progression, and the repo
+  must make the packaged XP corpus viewable rather than hiding behind one
+  focused fixture.
+- The successor expands `assets/sprites/` to the full 115 packaged XP files,
+  updates `docs/historical-evidence/manifest.json` to bind every XP hash, keeps
+  hand-entered labels and review notes tracked through
+  `docs/research/ascii/semantic_maps/layer_evidence_cards.jsonl`, changes the
+  GIF generator to an eight-state 0.18-second sequence, and adds an every-XP
+  raw-layer dump regression.
+- This entry rejects the earlier seven-state completion claim until the
+  regenerated GIF is opened in Finder, tests pass, the diff is reviewed, and a
+  new commit is pushed.
+
+## P0C-03 · 2026-08-31 — eight-state faster inspector GIF and full XP corpus verified
+
+- The corrected repository state packages all 115 XP inputs under
+  `assets/sprites/`, updates `docs/historical-evidence/manifest.json` with each
+  XP path and SHA-256, and keeps the hand-entered anchors/review cards under
+  `docs/research/ascii/semantic_maps/` as the historical evidence owner.
+- The regenerated `docs/armored-inspector.gif` shows eight semantic viewer
+  states: composed UV/body, L3 armor grid, animation group, two adjacent
+  animation frames, projection change, L4 helmet grid, and L4 helmet
+  angle/frame change. The artifact is 1320×720, 8 frames, 764,261 bytes,
+  SHA-256
+  `ba8748e6d86485edd82a959938612a910a2e40abc982dba47def5693c7ad6d7c`,
+  with an 18-centisecond delay per frame.
+- Verification performed in-session: `./scripts/regenerate_armored_inspector_gif.py`
+  completed, `python3 -m unittest discover -s tests -v` passed 17/17, the
+  every-XP raw-layer dump regression exercised all 115 packaged files, the GIF
+  was revealed in Finder with `open -R`, and a bounded contact-sheet preview
+  was visually inspected.
+- Highest supported stage: **Verified** for regenerated GIF behavior, full
+  packaged XP viewability, and hand-labeled evidence reachability. Operator
+  acceptance remains separate.
