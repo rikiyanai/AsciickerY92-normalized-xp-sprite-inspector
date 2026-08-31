@@ -65,6 +65,16 @@ source layer L3, adjacent animation-frame progression, the helmet grid from L4,
 and the helmet grid at another angle. It is intentionally paced at 0.18 seconds
 per frame for fast review.
 
+## Corpus sweep
+
+![Animated sweep through every packaged XP sprite](docs/xp-corpus-sweep.gif)
+
+This README-visible sweep is generated from the tracked corpus under
+`assets/sprites/`. It pages through all 115 packaged `.xp` files and advances
+animation/angle ticks while rendering the composed sprite preview. It is a
+corpus-breadth demo; the UV/body proof above remains the focused source-layer
+ownership demo.
+
 ## Included corpus and fixture
 
 The repository tracks all 115 packaged `.xp` files under `assets/sprites/`.
