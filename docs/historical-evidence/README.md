@@ -26,3 +26,22 @@ navigation. Run `./run-inspector.sh` to inspect it; run
 
 The companion machine-readable inventory records the expected count, hashes,
 and canonical evidence paths without duplicating the corpus.
+
+## Source-layer contract inputs
+
+The source-layer view uses the same XP files and review cards listed above,
+plus the following original input owners:
+
+| Evidence | Canonical owner |
+| --- | --- |
+| Frozen cell contract, 115 XP files / 573 raw layers | [`upstream_xp_cell_contract/`](../research/ascii/semantic_maps/upstream_xp_cell_contract/) |
+| Layer decisions | [`source_layer_review_decisions.jsonl`](../research/ascii/semantic_maps/source_layer_review_decisions.jsonl) |
+| Manual candidate review | [`manual_candidate_review.json`](../research/ascii/semantic_maps/manual_candidate_review.json) |
+| Family topology | [`family_topology_contracts.json`](../research/ascii/semantic_maps/family_topology_contracts.json) |
+| Source identities | [`provenance.md`](../provenance.md) |
+
+Run `./run-viewer.sh` for interactive inspection or `./run-viewer.sh --once`
+for deterministic text output. The single machine-readable manifest in this
+directory binds both views, all 115 asset hashes, the frozen contract totals,
+and each indexed input's SHA-256. The two original index versions remain
+available in the preserved pre-consolidation Git history.
