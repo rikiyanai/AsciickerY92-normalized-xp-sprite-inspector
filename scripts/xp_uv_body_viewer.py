@@ -2075,6 +2075,12 @@ def _anchor_help_lines() -> list[str]:
     ]
 
 
+def _layout_fits(*columns: list[str], terminal_cols: int, gap: int = 2) -> bool:
+    """True when the columns fit side-by-side within terminal_cols."""
+    widths = [max((_visible_len(l) for l in col), default=0) for col in columns]
+    return sum(widths) + gap * (len(columns) - 1) <= terminal_cols
+
+
 def _layout_three(
     left: list[str],
     mid: list[str],
@@ -2109,6 +2115,7 @@ def _anchor_compose_screen(
     asset: object | None = None,
     layer_index: int = 2,
     layer_label: str | None = None,
+    clip_rows: bool = True,
 ) -> str:
     """Compose the full terminal output for anchor review mode.
 
@@ -2128,6 +2135,9 @@ def _anchor_compose_screen(
         [region info panel below]
     """
     cols, rows = shutil.get_terminal_size(fallback=(120, 32))
+    if not clip_rows:
+        # One-shot output goes to a pipe or file, not a screen: keep every line.
+        rows = sys.maxsize
 
     help_lines = _anchor_help_lines()
     # Replace static header with metadata: semantic map, XP path, layer
@@ -2186,7 +2196,17 @@ def _anchor_compose_screen(
     else:
         # Classic layout: 3-panel horizontal when UV data available, else 2-panel
         if box_uv:
-            top = _layout_three(box_sprite, box_region, box_uv, terminal_cols=cols)
+            if _layout_fits(box_sprite, box_region, box_uv, terminal_cols=cols):
+                top = _layout_three(box_sprite, box_region, box_uv, terminal_cols=cols)
+            else:
+                # Narrow terminal (e.g. 80 cols): keep the UV map beside the
+                # sprite and drop the region-only view below, so the UV map is
+                # not pushed past the bottom of the screen.
+                top = (
+                    _layout_preview_and_info(box_sprite, box_uv, terminal_cols=cols)
+                    + [""]
+                    + box_region
+                )
             visible = (help_lines + [""] + top + [""] + panel_lines + [""] + status_lines)[:max(1, rows)]
         else:
             row1 = _layout_preview_and_info(box_sprite, box_region, terminal_cols=cols)
@@ -3356,6 +3376,7 @@ def render_anchor_once(anchor_path: Path, sprite_dir: Path = SPRITE_DIR) -> int:
             asset=asset,
             layer_index=layer_index,
             layer_label=f"layers {layer_index}-{asset.layer_count - 1} composed",
+            clip_rows=False,
         )
     )
     sys.stdout.write("\n")

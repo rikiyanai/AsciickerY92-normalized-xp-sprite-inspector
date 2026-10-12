@@ -38,10 +38,16 @@ The six-family review covers all 203 exact-fingerprint units, all 573 raw layers
 
 ## Validation
 
-The original build scripts can validate or rebuild the ledger from the parent pipeline checkout:
+The ledger is checked in this repository by the test suite: the manifest must
+resolve to exactly the 115 packaged XP files, and every file in
+`assets/sprites/` must match the SHA-256 recorded for it in the ledger.
 
 ```bash
-python3 pipeline-v3/scripts/build_upstream_xp_cell_contract_ledger.py --check
-python3 pipeline-v3/scripts/build_upstream_xp_cell_contract_ledger.py
-python3 pipeline-v3/scripts/build_upstream_xp_cell_review_queue.py --check
+python3 -m unittest discover -s tests -p 'test_source_layer_contract.py' -v
 ```
+
+The scripts that originally generated the ledger
+(`build_upstream_xp_cell_contract_ledger.py` and
+`build_upstream_xp_cell_review_queue.py`) live in the private `pipeline-v3`
+pipeline and are not shipped here, so the ledger is a frozen, read-only
+snapshot in this repository.

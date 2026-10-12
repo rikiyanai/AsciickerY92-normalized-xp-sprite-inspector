@@ -1,3 +1,5 @@
-# Used only by scripts/regenerate_armored_inspector_gif.py; the product has no
+# Used only by the GIF recording scripts (record_tour.py,
+# regenerate_armored_inspector_gif.py); the product has no
 # runtime Python dependencies beyond the standard library.
+pyte==0.8.2
 Pillow==12.1.0
